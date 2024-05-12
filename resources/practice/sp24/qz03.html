@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Quiz 03 Practice - COMP110 - 24S</title>
+  <link rel="icon" type="image/png" href="/static/tabbrand.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/static/styles.css?v=1715556394.008301">
+</head>
+
+<body>
+  <script src="/static/scripts/nav-menu-esc.js"></script> 
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
+    <div class="container">
+      <a href="/" class="navbar-brand">COMP 110</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" onclick="esc_key()" data-bs-target="#navmenu" aria-label="Main Menu" aria-controls="#navmenu" role="navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="/">agenda</a>
+          </li>
+          <li class="nav-item">
+            <a href="/resources" class="nav-link">resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="/support" class="nav-link">support</a>
+          </li>
+          <li class="nav-item">
+            <a href="/resources/syllabus" class="nav-link">syllabus</a>
+          </li>
+          <li class="nav-item">
+            <a href="/resources/team.html" class="nav-link">team110</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="lessons-page" class="container">
+    <div class="row pt-4">
+      <div class="col-12">
+        <h1>Quiz 03 Practice</h1>
+        <hr class="title" />
+      </div>
+    </div>
+
+    <script src="/static/scripts/toggle-handler.js"></script>
+    
+    <div class="row px-4">
+        <div id="box" class="toc col-xl-3 col-lg-3 order-1 order-lg-2" role="doc-toc">
+            <div id="menu-overview" class="link-page horizon-box">
+                <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview  <img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-up.svg" style="height:15px; padding-left: 4px;"></button>
+                <div id="overview-links">
+                    <div id="TOC" role="doc-toc">
+                        <ul class="overview-item"><ul>
+<li><a href="#quiz-review-questions">Quiz Review Questions</a>
+<ul>
+<li><a href="#conceptual-questions">Conceptual Questions</a>
+<ul>
+<li><a href="#dictionaries">Dictionaries</a></li>
+<li><a href="#unit-tests">Unit Tests</a></li>
+<li><a href="#runtime-analysis">Runtime Analysis</a></li>
+</ul></li>
+<li><a href="#unit-tests-short-response">Unit Tests Short Response</a></li>
+<li><a href="#function-writing">Function Writing</a></li>
+<li><a href="#memory-diagrams">Memory Diagrams</a></li>
+</ul></li>
+<li><a href="#quiz-review-solutions">Quiz Review Solutions</a>
+<ul>
+<li><a href="#conceptual-questions-solutions">Conceptual Questions Solutions</a>
+<ul>
+<li><a href="#dictionaries-1">Dictionaries</a></li>
+<li><a href="#unit-tests-1">Unit Tests</a></li>
+<li><a href="#runtime-analysis-1">Runtime Analysis</a></li>
+</ul></li>
+<li><a href="#unit-tests-short-response-solutions">Unit Tests Short Response Solutions</a></li>
+<li><a href="#function-writing-solutions">Function Writing Solutions</a></li>
+</ul></li>
+</ul>
+</</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h1 id="quiz-review-questions">Quiz Review Questions</h1>
+<h2 id="conceptual-questions">Conceptual Questions</h2>
+<h3 id="dictionaries">Dictionaries</h3>
+<ol type="1">
+<li>Dictionaries in Python can have duplicate keys. (T/F)</li>
+<li>Dictionaries in Python can be nested, meaning a dictionary can contain another dictionary as a value. (T/F)</li>
+</ol>
+<h3 id="unit-tests">Unit Tests</h3>
+<ol type="1">
+<li>All pytest test function names must begin with <code>test_</code>. (T/F)</li>
+<li>If a unit test does NOT pass, this means that one of the assertions in the test is False. (T/F)</li>
+<li>Test functions should be written in a file with a name followed by <code>_test.py</code>. (T/F)</li>
+<li>Pytest is the only unit testing framework available for Python. (T/F)</li>
+<li>Unit tests in Pytest are written in separate files from the code they are testing. (T/F)</li>
+</ol>
+<h3 id="runtime-analysis">Runtime Analysis</h3>
+<ol type="1">
+<li>A function with a big-O notation of O(n) will <em>always</em> run faster than a function with a big-O notation of O(n^2) for all input sizes. (T/F)</li>
+<li>Big-O notation considers the constants and lower-order terms when analyzing the runtime of an algorithm. (T/F)</li>
+<li>Big-O notation can be used to analyze both time complexity and space complexity of algorithms. (T/F)</li>
+<li>Big-O notation provides a precise measurement of the actual runtime of an algorithm on a specific machine. (T/F)</li>
+<li>Big-O notation accounts for variations in performance due to factors like hardware and compiler optimizations. (T/F)</li>
+<li>If an algorithm has a time complexity of O(1), it means its runtime is constant and independent of the input size. (T/F)</li>
+<li>What does it mean for an input to be a “worst case” input?</li>
+<li>What is a worst-case input for a <code>search</code> function?</li>
+<li>What is a worst-case input for a <code>sort</code> function?</li>
+</ol>
+<p><a href="#conceptual-questions-solutions">Solutions</a></p>
+<h2 id="unit-tests-short-response">Unit Tests Short Response</h2>
+<ol type="1">
+<li>This function finds the first word in a <code>list</code> of <code>str</code> with an <em>even</em>length.</li>
+</ol>
+<pre><code>    def find_even(words: list[str]) -&gt; str:
+        idx: int = 0
+        while idx &lt; len(words):
+            if len(words[idx]) % 2 == 0:
+                return words[idx]
+            idx += 1
+        return &quot;&quot;</code></pre>
+<p>Fill in this unit test with a <em>use case</em>.</p>
+<pre><code>    def test_find_even_use_case() -&gt; None:
+            &quot;&quot;&quot; Put code here. &quot;&quot;&quot;</code></pre>
+<ol start="2" type="1">
+<li>This function <em>removes</em> the first word in a <code>list</code> of <code>str</code> with an <em>even</em> length.</li>
+</ol>
+<pre><code>    def remove_first_even(words: list[str]) -&gt; None:
+        idx: int = 0
+        condition: bool = True
+        while (idx &lt; len(words)) and condition:
+            if len(words[idx]) % 2 == 0:
+                words.pop(idx)
+                condition = False
+            idx += 1</code></pre>
+<p>Fill in this unit test with a <em>use case</em>.</p>
+<pre><code>    def test_remove_first_even_use_case() -&gt; None:
+            &quot;&quot;&quot; Put code here. &quot;&quot;&quot;</code></pre>
+<p><a href="#unit-tests-short-response-solutions">Solutions</a></p>
+<h2 id="function-writing">Function Writing</h2>
+<ol type="1">
+<li><code>value_exists</code>:</li>
+</ol>
+<ul>
+<li>The function name is value_exists and is called with a <code>dict[str,int]</code> and an <code>int</code> as an argument.</li>
+<li>The function should return a <code>bool</code>.</li>
+<li>The function should return <code>True</code> if the <code>int</code> exists as a value in the dictionary, and <code>False</code> otherwise.</li>
+<li>The function should not mutate (modify) the input dict.</li>
+<li>Explicitly type variables, parameters, and return types.</li>
+<li>The following REPL examples demonstrate expected functionality of your <code>value\_exists</code> function:</li>
+</ul>
+<pre>
+<div class="terminal">
+>>> test_dict: dict[str,int] = {"a": 2, "b": 4, "c": 7, "d": 1}
+>>> test_val: int = 4
+>>> value_exists(test_dict, test_val)
+True
+>>> value_exists(test_dict, 5)
+False
+</div>
+</pre>
+<ol start="2" type="1">
+<li><code>plus_or_minus_n</code>:</li>
+</ol>
+<ul>
+<li>The function name is <code>plus_or_minus_n</code> and is called with <code>inp: dict[str,int]</code> and <code>n: int</code> as an argument.</li>
+<li>The function should return <code>None</code>. It instead <em>mutates</em> the input dictionary <code>inp</code>.</li>
+<li>The function should check if each <em>value</em> in <code>inp</code> is even or odd. If it is even, add <code>n</code> to that value. If it is odd, subtract <code>n</code>.</li>
+<li>Explicitly type variables, parameters, and return types.</li>
+<li>The following REPL examples demonstrate expected functionality of your function:</li>
+</ul>
+<pre>
+<div class="terminal">
+>>> test_dict: dict[str,int] = {"a": 2, "b": 4, "c": 7, "d": 1}
+>>> test_val: int = 4
+>>> plus_or_minus_n(test_dict, test_val)
+>>> test_dict
+{"a": 6, "b": 8, "c": 3, "d": -3}
+</div>
+</pre>
+<p><a href="#function-writing-solutions">Solutions</a></p>
+<h2 id="memory-diagrams">Memory Diagrams</h2>
+<p>Focus on the Dictionary memory diagrams on the <a href="/resources/practice/MemDiagrams.html">practice memory diagram page</a>.</p>
+<h1 id="quiz-review-solutions">Quiz Review Solutions</h1>
+<h2 id="conceptual-questions-solutions">Conceptual Questions Solutions</h2>
+<h3 id="dictionaries-1">Dictionaries</h3>
+<ol type="1">
+<li>False. It can have duplicate <em>values</em>, but the keys must be unique.</li>
+<li>True. E.g. <code>example: dict[str, dict[str, str]] = {"a": {"Hello": "World"}}</code></li>
+</ol>
+<h3 id="unit-tests-1">Unit Tests</h3>
+<ol type="1">
+<li>True</li>
+<li>True</li>
+<li>True</li>
+<li>False. It is the one we use for this class, but there are other frameworks!</li>
+<li>True</li>
+</ol>
+<h3 id="runtime-analysis-1">Runtime Analysis</h3>
+<ol type="1">
+<li><p>False. <span class="math inline"><em>n</em></span> IS faster that <span class="math inline"><em>n</em><sup>2</sup></span>, but given that this is Big-O notation, it’s only considering the worst case input. In other words, it’ll run faster for a worst-case input, but not necessarily for every possible input.</p></li>
+<li><p>False. For example if a runtime is computed to be <span class="math inline"><em>O</em>(<em>n</em><sup>2</sup> + 2<em>n</em> + 3)</span>, that’ll simply be represented as <span class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>.</p></li>
+<li><p>True</p></li>
+<li><p>False. It’s a general performance approximation in terms of input size.</p></li>
+<li><p>False.</p></li>
+<li><p>True.</p></li>
+<li><p>This is an input that will result in the longest possible runtime of the algorithm. In other words, this is the input that will reflect the Big-O runtime.</p></li>
+<li><p>Searching for an element that is not in the list. This means you’ll have to look at the entire list before realizing that it’s not there.</p></li>
+<li><p>A descending list. This means every element is in the wrong location and will need to be moved. (This is what you do in the runtime exercise.)</p></li>
+</ol>
+<h2 id="unit-tests-short-response-solutions">Unit Tests Short Response Solutions</h2>
+<p>These can have many possible answers! Here is just one example.</p>
+<ol type="1">
+<li></li>
+</ol>
+<pre><code>    def test_find_even_use_case() -&gt; None:
+            test_input: list[str] = [&quot;Hello&quot;, &quot;Hi&quot;, &quot;Howdy&quot;, &quot;Hiya&quot;]
+            assert find_even(test_input) == &quot;Hi&quot;</code></pre>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<pre><code>    def test_remove_first_even_use_case() -&gt; None:
+        test_input: list[str] = [&quot;Hello&quot;, &quot;Hi&quot;, &quot;Howdy&quot;, &quot;Hiya&quot;]
+        remove_first_even(test_input)
+        assert test_input == [&quot;Hello&quot;, &quot;Howdy&quot;, &quot;Hiya&quot;]</code></pre>
+<h2 id="function-writing-solutions">Function Writing Solutions</h2>
+<ol type="1">
+<li><code>value_exists</code>:</li>
+</ol>
+<pre><code>    def value_exists(d: dict[str, int], num: int) -&gt; bool:
+        for key in d:
+            if d[key] == num:
+                return True
+        return False</code></pre>
+<pre><code>    def value_exists(d: dict[str, int], num: int) -&gt; bool:
+        exists: bool = False
+        for key in d:
+            if d[key] == num:
+                exists = True
+        return exists</code></pre>
+<ol start="2" type="1">
+<li><code>plus_or_minus_n</code>:</li>
+</ol>
+<pre><code>    def plus_or_minus_n(inp: dict[str, int], n: int) -&gt; None:
+        for key in inp:
+            if inp[key] % 2 == 0:
+                inp[key] = inp[key] + n
+            else: # element is odd
+                inp[key] = inp[key] - n</code></pre>
+<pre><code>    def plus_or_minus_n(inp: dict[str, int], n: int) -&gt; None:
+        for key in inp:
+            if inp[key] % 2 == 0:
+                inp[key] += n
+            else: # element is odd
+                inp[key] -= n</code></pre>
+</div>
+
+       
+
+    </div> 
+
+    <div class="authors-box bg-dark mt-4 py-3 ps-4">
+      <span> Contributor(s):        Alyssa Lytle,        Megan Zhang,        David Karash,        Coralee Vickers, Carolyn Pierce</span>
+    </div>
+  </div>
+  <div class='link-page mt-3 container'>
+    <footer>
+      <h3 class="text-center align-middle footer-text">&copy; 2023 <a href="https://krisjordan.com">Kris Jordan</a>
+        - <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSenaJ2uZ_n2FfAb2PWL6YPG4AUT-G2-xVJP6HIwMr6cd6nSYA/viewform?usp=sf_link">Feedback
+          Form</a>
+        - Made with 💛 in <a href="https://cs.unc.edu/">Chapel Hill</a></h3>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- Code Block Formatting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+  <script>hljs.initLineNumbersOnLoad();</script>
+  <script>hljs.highlightAll();</script>
+  
+</body>
+
+</html>
