@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1715720094.7770035">
+  <link rel="stylesheet" href="/static/styles.css?v=1715724681.6261604">
 </head>
 
 <body>
@@ -62,10 +62,12 @@
                     <div id="TOC" role="doc-toc">
                         <ul class="overview-item"><ul>
 <li><a href="#complete-the-prerequisites">0. Complete the Prerequisites</a></li>
-<li><a href="#write-your-first-program">1. Write Your First Program!</a></li>
-<li><a href="#make-a-backup-checkpoint-commit">3. Make a Backup Checkpoint “Commit”</a></li>
-<li><a href="#submit-to-gradescope-for-grading">4. Submit to Gradescope for Grading</a></li>
-<li><a href="#congratulations">5. Congratulations!</a></li>
+<li><a href="#starting-from-the-trailhead">1. Starting from the Trailhead</a></li>
+<li><a href="#starting-trailhead">2. Starting Trailhead</a></li>
+<li><a href="#writing-your-first-program">3. Writing Your First Program</a></li>
+<li><a href="#make-a-backup-checkpoint-commit">4. Make a Backup Checkpoint “Commit”</a></li>
+<li><a href="#submit-to-gradescope-for-grading">5. Submit to Gradescope for Grading</a></li>
+<li><a href="#congratulations">6. Congratulations!</a></li>
 </ul>
 </</ul>
                     </div>
@@ -77,36 +79,39 @@
 <p>Before continuing on, be sure you’ve completed each of the following steps to prepare your computer for the course’s programming assignments:</p>
 <ol start="0" type="1">
 <li><a href="/resources/setup/os-update.html">Update your Operating System</a></li>
-<li><a href="/resources/setup/software.html">Install Needed Software Development Tools (Python 3.11, Visual Studio Code, and git)</a></li>
+<li><a href="/resources/setup/software.html">Install Needed Software Development Tools</a></li>
 <li><a href="/resources/setup/workspace.html">Setup a Workspace</a></li>
 </ol>
-<h2 id="write-your-first-program">1. Write Your First Program!</h2>
-<p>Now for the main attraction! Let’s write a classic “hello world” program.</p>
-<p>In Visual Studio Code, be sure your workspace is open. (Reminder: File &gt; Open Recent &gt; comp110-YYS-workspace is a quick way to reopen it! Where YY is the current year and S is the semeseter: S for Spring, F for Fall, SSX for Summer Session X.)</p>
-<p>Open the Explorer pane (click the icon with two sheets of paper or to to <em>View</em> &gt; <em>Explorer</em>) and expand the <em>Workspace</em> directory.</p>
-<p>Right click on the <code>exercises</code> directory, then select create new file and name it <code>ex00_hello_world.py</code>.</p>
-<p>An empty file opens. The <code>.py</code> file extension is standard for Python programs.</p>
-<p>For the past 50 or so years it’s a tradition in the programming world for your first program to print the words “Hello, world.” We won’t break it.</p>
-<p>Write the line of code below in your file:</p>
-<div class="sourceCode" id="cb1" data-startFrom="1"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world.&quot;</span>)</span></code></pre></div>
-<p>Next, <strong>save your program</strong> (shortcuts on Windows: <code>Control+S</code>, Mac: <code>Command+S</code>).</p>
-<p>To run your program, first open a terminal: <em>Terminal</em> &gt; <em>New Terminal</em></p>
-<p>Then, in the Terminal, type out the following command and press enter:</p>
-<p><code>python -m exercises.ex00_hello_world</code></p>
-<p>If it works, you should see the text “Hello, world.” printed in your terminal! If it doesn’t work, it’s likely a minor issue somewhere. Programming is very precise, go back through and try each instruction again checking for exact punctuation, capitalization, and spelling matches. Even a minor discrepency will cause it to go awry. On a Mac, you <em>may</em> need to run <code>python3 -m exercises.ex00_hello_world</code> instead. If that works, from here on use the command <code>python3</code> wherever you see us use <code>python</code>.</p>
-<p>If you are stuck, come see us in office hours by following the instructions posted on the support page. We’ll be able to work it out with you! As you know, there were a lot of steps to get to this point, so it’s not uncommon for something super minor to be off somewhere. The good news is, once your setup is working you’ll be in good shape moving forward for the course.</p>
-<p>Congratulations, you’ve written and run your first Python program! Try running it again by pressing the up arrow on your keyboard, noticing the same command you ran last is filled in, and pressing enter again.</p>
-<p>What is the command you wrote doing? The first word <code>python</code> is the program responsible for interpretting your code. The second symbol, <code>-m</code>, is what we call an “option” that is short for “run as <em><code>m</code>odule</em>”. You’ll learn all about modules soon. Lastly, <code>exercises.ex00_hello_world</code> is referring to the file you created! Notice you created the file <code>ex00_hello_world.py</code> in the <code>exercises</code> directory, or “folder”. This is the module you are asking <code>python</code> to interpret!</p>
-<p>Try changing the text inside of the double quotes (but be sure to keep the words <code>hello</code> and <code>world</code> somewhere), saving again, and rerunning your program.</p>
-<p>What is this line of code doing? You are <em>calling</em> a <em>function</em> named <code>print</code>. The <code>print</code> function is <a href="https://docs.python.org/3/library/functions.html#print">built-in to the Python programming language</a> and results in data being “printed” out <em>somewhere</em>. By default, that <em>somewhere</em> is on your screen in the Terminal. The parentheses following the word <code>print</code> indicate extra information being given to the <code>print</code> function. In this example, you are giving a piece of textual information to print which is called a “string” and denoted by the double quotes surrounding the textual data. Don’t worry, we will break down all of this into more tangible detail soon!</p>
-<p>Your first program is <em>almost complete</em>! However, before submitting it there are a couple more style and documentation steps to complete.</p>
-<p>First, you should add a special kind of string value, called a <em>docstring</em> short for documentation string, to the top of your program file, which is a Python <em>module</em>. Then, you should add a line with a special variable named <code>__author__</code> assigned to be your 9-digit student PID. (Disclaimer: Out in the real world the <code>__author__</code> variable is typically your name and e-mail address, but since we will grade your programs we’d like to avoid potential bias in seeing your names as part of the programs as we’re grading.) Add the following lines above the line of code that calls the <code>print</code> function. Fill in <em>your</em> 9-digit UNC PID number, without any spaces or dashes, in the <code>__author__</code> string.</p>
-<div class="sourceCode" id="cb2" data-startFrom="1"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">&quot;&quot;&quot;My first program for COMP110.&quot;&quot;&quot;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a>__author__ <span class="op">=</span> <span class="st">&quot;1234567890&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a></span></code></pre></div>
-<p>Save your program again and re-run it. You should still only see your printed output message. What must that mean about the two lines of code you just added? They’re for documentation purposes and must not impact the <em>printed output</em> of the program.</p>
-<h2 id="make-a-backup-checkpoint-commit">3. Make a Backup Checkpoint “Commit”</h2>
+<h2 id="starting-from-the-trailhead">1. Starting from the Trailhead</h2>
+<p>Before opening up VSCode, you will want to be sure Docker Desktop is running on your computer. On a Mac, you can check this by looking for the whale with boxes icon in your top menu bar. On Windows, you can check this by looking for the whale with boxes icon in your system tray. If you do not see the icon, open the Docker Desktop application from your start menu or applications folder.</p>
+<p>Our programming journey begins in Visual Studio Code, a free, leading text-editor designed for software development. Go ahead and open Visual Studio Code!</p>
+<p>Once open, from the “File” menu, select “Open Recent…”. After completing the setup instructions above, you should see two entries with <code>comp110-24s-workspace-[Your GitHub Username]</code>. You want to select the one with <code>[Dev Container]</code> at the end of it. Go ahead and open it up!</p>
+<p>You should be greeted with window that looks like the following (if tabs are open in the main part of the window, you can close them):</p>
+<figure>
+<img src="/static/exercises/ex00/vscode-dev-container.png" alt="" /><figcaption>VSCode Dev Container</figcaption>
+</figure>
+<p>There are three important parts to recognize in this window you will make use of through the semester:</p>
+<ol type="1">
+<li><p>In the bottom left corner, you should see “Dev Container: comp110-24s-003” as shown in the photo above. If you only see the <code>&gt;&lt;</code> icon, open the VSCode command palette by pressing <code>Ctrl+Shift+P</code> (or <code>Cmd+Shift+P</code> on Mac) and type “Reopen in Container”. This will open the Dev Container and you should see the “Dev Container: comp110-24s-003” appear.</p></li>
+<li><p>In the top left corner, you will see an icon with two files that represents the “File Explorer”. Clicking it will open, or toggle closed if it is already open, a panel that shows the files and directories in your workspace.</p></li>
+<li><p>Finally, there is a sidebar button with a Play icon and a bug for the “Run and Debug” panel. This panel is where you will start the Trailhead app from. You will learn about additional “debugging” capabilities found in this panel soon.</p></li>
+</ol>
+<h2 id="starting-trailhead">2. Starting Trailhead</h2>
+<p>Open the “Run and Debug” pane, as discussed above, and press the green play button. You should see a new terminal window open in the bottom of the screen and a message that says “Starting Trailhead server at http://localhost:1110” appear in a terminal. You can close this terminal pane with the X after seeing this message.</p>
+<iframe style="aspect-ratio: 16/9; width:100%;" src="https://www.youtube.com/embed/Ul9ompArzpY?si=ag3p72ENJ3ZziqeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+<p>As shown in the video above, your next step is to open a web browser (Google Chrome is recommended for our course) and navigate to <code>http://localhost:1110</code>. You should see Trailhead’s home page! If you do not, try the address <code>http://127.0.0.1:1110</code> instead. These two web addresses, <code>localhost</code> and <code>127.0.0.1</code> refer to your personal computer and the <code>:1110</code> refers to the “port number” Trailhead is running on. One-thousand 110, hopefully a memorable number :)</p>
+<p>From the “Trailhead” home screen, your workspace’s modules are listed. The “welcome” module refers to the <code>welcome.py</code> found in the “File Explorer” pane of VSCode. Opening the “.py” file, you can see the code which resulted in the message being displayed in Trailhead.</p>
+<p>We recommend keeping VSCode and your browser, with Trailhead open, side-by-side such that you can see both at the same time. As you are writing programs, you will want to see and interact with the results of your work in the Trailhead browser window.</p>
+<h2 id="writing-your-first-program">3. Writing Your First Program</h2>
+<p>In Trailhead, navigate back to the home page by clicking “Trailhead” in the navigation.</p>
+<p>In VSCode, open the “File Explorer” pane and right-click in the blank space. Select “New File” and name the file <code>ex00_hello_world.py</code>. Double check that the filename exactly matches what is specified here. In Trailhead, you will see the your new module appear. If you click to open it, you will see that the “module exited without output.” This is because the file is empty.</p>
+<p>Open the <code>ex00_hello_world.py</code> file in VSCode and type the following:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div>
+<p>What is this line of code doing? You are calling a <em>function</em> named <code>print</code>. The <code>print</code> function is built-in to the Python programming language and results in data being “printed” out somewhere. By default, that somewhere is on your screen in the Terminal. The parentheses following the word <code>print</code> indicate extra information being given to the <code>print</code> function. In this example, you are giving a piece of textual information to print which is called a “string” and denoted by the double quotes surrounding the textual data. Don’t worry, we will break down all of this into more tangible detail soon!</p>
+<p>Save the file again, by pressing <code>Ctrl+S</code> (or <code>Cmd+S</code> on Mac). In Trailhead, you should see the message “Hello, world!” now appear as output. This should happen automatically upon saving, but you can also manually run the program again with the green “Run Again” or “Rerun” button.</p>
+<p>Congratulations! You have written your first program in Python! For over fifty years, it’s been a rite of passage for new programmers’ first program to print “Hello, world!” to the screen. Wooo! You’ve taken your first step on the trail to becoming a programmer!</p>
+<h2 id="make-a-backup-checkpoint-commit">4. Make a Backup Checkpoint “Commit”</h2>
 <p>Now that your first program is complete, let’s practice making a backup. Visual Studio Code has built-in support for <code>git</code> source control management (SCM). SCM tools are made to help create versioned checkpoints of a project’s source code (your program is source code!) amont other uses. The current de facto SCM is called <code>git</code>. As one more piece of terminology, a checkpointed version in git is called a <code>commit</code>. Once your work is in a <code>commit</code> checkpoint, you can always return back to your project at that point in time without the risk of losing work. We encourage committing work to backup <em>at least</em> each time you submit a project for grading or are finishing out a working session for the day. Commits are free to make and can only help you avoid losing work; use them liberally!</p>
 <ol type="1">
 <li>Open the Source Control panel (Command Palette: “Show SCM” or click the icon with three circles and lines on the activity panel).</li>
@@ -129,7 +134,7 @@
 </ul></li>
 </ol>
 <p>To see your commit on Github, in a web browser, navigate to <code>https://github.com/comp110-24s/comp110-workspace-USERNAME</code> and substitute <code>USERNAME</code> with your GitHub username. Open the <code>comp110</code> directory, then <code>exercises</code>, and <code>ex0_hello_world.py</code> you’ll see the work you just completed backed up to GitHub. Notice above the file’s content’s you’ll see your commit message.</p>
-<h2 id="submit-to-gradescope-for-grading">4. Submit to Gradescope for Grading</h2>
+<h2 id="submit-to-gradescope-for-grading">5. Submit to Gradescope for Grading</h2>
 <p>All that’s left now is to hand-in your work on Gradescope for grading!</p>
 <p>Before doing so, you need to know that <em>before</em> an assignment’s deadline you can resubmit work as many times as you need to <em>without penalty</em>. Portions of assignments are autograded and will provide near-immediate feedback. We <em>want</em> you to resubmit as many times as it takes you in order to earn full autograding credit!</p>
 <p>Login to Gradescope and select the assignment named “EX00 - Hello, world.”. You’ll see an area to upload a zip file. To produce a zip file for autograding, return back to Visual Studio Code.</p>
@@ -138,7 +143,7 @@
 <p><code>python -m tools.submission exercises/ex00_hello_world.py</code></p>
 <p>In the file explorer pane, look to find the zip file named “yy.mm.dd-hh.mm-exercises-ex00_hello_world.py.zip”. The “yy”, “mm”, “dd”, and so on, are timestamps with the current year, month, day, hour, minute. If you right click on this file and select “Reveal in File Explorer” on Windows or “Reveal in Finder” on Mac, the zip file’s location on your computer will open. Upload this file to Gradescope to submit your work for this exercise.</p>
 <p>Autograding will take a few moments to complete. For this exercise there will be no “human graded” component, but in future exercises and projects there will. Thus, you should expect to score 100 out of 100 possible points on this assignment. If there are issues reported, you are encouraged to try and resolve them and resubmit. If for any reason you aren’t receiving full credit and aren’t sure what to try next, come give us a visit in office hours!</p>
-<h2 id="congratulations">5. Congratulations!</h2>
+<h2 id="congratulations">6. Congratulations!</h2>
 <p>There were <em>a lot</em> of steps and new concepts thrown at you in this initial exercise. Gearing up is half the battle! The amount of setup involved in a modern development environment can be a little overwhelming to a first-time programmer. You are not expected to understand the intricacies of all the processes and software you just followed and setup. That will come with time. For now, focus on the big win that is having written a Python program in a professional code editor, run it, and backed it up using git! Programming gets way more fun, and way more creatively rewarding, as we make our way up the mountain from here.</p>
 </div>
 
