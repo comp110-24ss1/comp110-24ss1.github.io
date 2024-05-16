@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1715812671.148004">
+  <link rel="stylesheet" href="/static/styles.css?v=1715820087.2850556">
 </head>
 
 <body>
@@ -80,6 +80,7 @@
 <li><a href="#part-6.-type-safety-and-linting---10-points">Part 6. Type Safety and Linting - 10 points</a></li>
 <li><a href="#part-7.-hand-grading">Part 7. Hand Grading</a></li>
 <li><a href="#rubric">Rubric</a></li>
+<li><a href="#make-a-backup-checkpoint-commit">4. Make a Backup Checkpoint “Commit”</a></li>
 <li><a href="#submit-to-gradescope-for-grading">Submit to Gradescope for Grading</a></li>
 </ul>
 </</ul>
@@ -168,6 +169,29 @@
 <li>Part 5. Exiting Early for Invalid Inputs - 10 points</li>
 <li>Part 6. Type Safety and Linting - 10 points</li>
 </ul>
+<h2 id="make-a-backup-checkpoint-commit">4. Make a Backup Checkpoint “Commit”</h2>
+<p>Now you can commit your new work to Github! This will back up your work online!</p>
+<ol type="1">
+<li>Open the Source Control panel (Command Palette: “Show SCM” or click the icon with three circles and lines on the activity panel).</li>
+<li>Notice the files listed under Changes. These are files you’ve made modifications to since your last backup.</li>
+<li>Move your mouse’s cursor over the word <em>Changes</em> and notice the + symbol that appears. Click that plus symbol to add all changes to the next backup. You will now see the files listed under “Staged Changes”.
+<ul>
+<li>If you do not want to backup <em>all</em> changed files, you can select them individually. For this course you’re encouraged to back everything up.</li>
+</ul></li>
+<li>In the Message box, give a brief description of what you’ve changed and are backing up. This will help you find a specific backup (called a “commit”) if needed. In this case a message such as, “Finished Exercise 00!” will suffice.</li>
+<li>Press the Check icon to make a <em>Commit</em> (a version) of your work.</li>
+<li>Open the <em>View</em> menu and select <em>Command Palette</em>, the shortcut for this menu is:
+<ul>
+<li>Windows: <code>Control+Shift+P</code></li>
+<li>Mac: <code>Command+Shift+P</code></li>
+</ul></li>
+<li>Begin typing in: <code>Git: Push to...</code> and press <code>Enter</code> once it is the first option.</li>
+<li>Select the <code>backup</code> remote that is your personal workspace on GitHub. If you do not see <code>backup</code> listed, see the instructions below on <em>Setup Backup Course Material Repository</em>.
+<ul>
+<li>You may see a spinning “refresh” icon in your status bar at the bottom of VSCode. Unless an error backing up occurs, you will not see any confirmation.</li>
+</ul></li>
+</ol>
+<p>To see your commit on Github, in a web browser, navigate to <code>https://github.com/comp110-24ss1/comp110-workspace-USERNAME</code> and substitute <code>USERNAME</code> with your GitHub username. Open the <code>comp110</code> directory and <code>ex00_hello_world.py</code> you’ll see the work you just completed backed up to GitHub. Notice above the file’s content’s you’ll see your commit message.</p>
 <h2 id="submit-to-gradescope-for-grading">Submit to Gradescope for Grading</h2>
 <p>All that’s left now is to hand-in your work on Gradescope for grading!</p>
 <p>Login to Gradescope and select the assignment named “EX01 - Simple Battleship”. You’ll see an area to upload a zip file. To produce a zip file for autograding, return back to Visual Studio Code.</p>
