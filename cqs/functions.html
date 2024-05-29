@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Practice Memory Diagram - COMP110 - 24S</title>
+  <title> Challenge Question - COMP110 - 24S</title>
   <link rel="icon" type="image/png" href="/static/tabbrand.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1717018470.6218448">
+  <link rel="stylesheet" href="/static/styles.css?v=1717018463.8641114">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
   <div id="lessons-page" class="container">
     <div class="row pt-4">
       <div class="col-12">
-        <h1>Practice Memory Diagram</h1>
+        <h1>Challenge Question</h1>
         <hr class="title" />
       </div>
     </div>
@@ -61,10 +61,11 @@
                 <div id="overview-links">
                     <div id="TOC" role="doc-toc">
                         <ul class="overview-item"><ul>
-<li><a href="#snippet">Snippet</a></li>
-<li><a href="#solution">Solution</a>
+<li><a href="#functions-challenge-question">Functions Challenge Question</a>
 <ul>
-<li><a href="#image-description">Image Description</a></li>
+<li><a href="#part-0.-setup">Part 0. Setup</a></li>
+<li><a href="#part-1.-display_evens">Part 1. <code>display_evens()</code></a></li>
+<li><a href="#submission">Submission</a></li>
 </ul></li>
 </ul>
 </</ul>
@@ -72,18 +73,27 @@
                 </div>
             </div>
         </div>
-        <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h1 id="snippet">Snippet</h1>
-<pre><code>    def loop(x: int) -&gt; int:
-        if x &lt; 3:
-            return x
-        else:
-            return loop(x-2)
-
-    print(loop(6))</code></pre>
-<h1 id="solution">Solution</h1>
-<p><a href="https://youtu.be/15mYJuQlsro?si=75MCvjxDPp1LYAVp">Video</a> <img class="img-fluid" src="/static/practice-mem-diagrams/basic-loop.png" alt="Image Description Here"  /></p>
-<h2 id="image-description">Image Description</h2>
-<p><em>(Coming Soon)</em></p>
+        <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h1 id="functions-challenge-question">Functions Challenge Question</h1>
+<p>For this challenge question, you are going to practice both writing functions and <code>while</code> loops!</p>
+<h2 id="part-0.-setup">Part 0. Setup</h2>
+<p>Start by opening your workspace in Visual Studio. Right click on the “lessons” folder and select “add file”. Your file will be named <code>evens_function.py</code>.</p>
+<p>Set up your document by adding a docstring and initializing the <code>__author__</code> variable with your PID.</p>
+<h2 id="part-1.-display_evens">Part 1. <code>display_evens()</code></h2>
+<p>Now, write a function called <code>display_evens</code> that takes as input an integer and does the following:</p>
+<ul>
+<li>prints all even numbers less than or equal to that input number in decreasing order down to 0 and</li>
+<li>returns the original number.</li>
+</ul>
+<p>For example, <code>get_evens(6)</code> should print:</p>
+<p><code>6</code></p>
+<p><code>4</code></p>
+<p><code>2</code></p>
+<p><code>0</code></p>
+<p>and return the value <code>6</code>.</p>
+<h2 id="submission">Submission</h2>
+<p>Create a .zip file by running the following command in your terminal:</p>
+<p><code>python -m tools.submission lessons/evens_function.py</code></p>
+<p>Then, drag and drop that .zip file into Gradescope!</p>
 </div>
 
        
@@ -91,7 +101,7 @@
     </div> 
 
     <div class="authors-box bg-dark mt-4 py-3 ps-4">
-      <span> Contributor(s): Alyssa Lytle</span>
+      <span> Contributor(s): Alyssa Byrnes</span>
     </div>
   </div>
   <div class='link-page mt-3 container'>
