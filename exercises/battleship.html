@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1717028247.1893454">
+  <link rel="stylesheet" href="/static/styles.css?v=1717073958.8013835">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
         <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><p>In this exercise, you will use the concept of <em>functions</em> to organize much of the functionality we developed in EX02. Moreover, rather than only getting one-attempt at guessing the secret boat location, you will get five! To get a sense of where you are going, here are two examples of the final game:</p>
 <pre>
 <div class="terminal">
-    $ python -m exercises.ex03_functional_battleship
+    $ python -m ex03_functional_battleship
     === Turn 1/5 ===
     Guess a row: 2
     Guess a column: 1
@@ -122,7 +122,7 @@
     Hit!
     You won in 4/5 turns!
 
-    $ python -m exercises.ex03_functional_battleship
+    $ python -m ex03_functional_battleship
     === Turn 1/5 ===
     Guess a row: 1
     Guess a column: 1
@@ -192,7 +192,7 @@
 <h2 id="part-0.-setting-up-the-python-program">Part 0. Setting up the Python Program</h2>
 <p>In Visual Studio Code, be sure your workspace is open. (Reminder: File &gt; Open Recent &gt; comp110-YYS-workspace is a quick way to reopen it! Where YY is the current year and S is the semeseter: S for Spring, F for Fall.)</p>
 <p>Open the Explorer pane (click the icon with two sheets of paper or to to <em>View</em> &gt; <em>Explorer</em>) and expand the <em>Workspace</em> directory.</p>
-<p>Right click on the <code>exercises</code> directory and select “New File”. Enter the following filename, being careful to match capitalization and punctuation:</p>
+<p>Right click in the workspace directory and select “New File”. Enter the following filename, being careful to match capitalization and punctuation:</p>
 <ul>
 <li><code>ex03_functional_battleship.py</code></li>
 </ul>
@@ -201,14 +201,14 @@
 <p>Declare a function named <code>input_guess</code>. The function will prompt for and eventually return the user’s row or column guess. More specifically, the function takes in an <code>int</code> parameter representing the size of the grid, a <code>str</code> parameter representing a specification of row or column, and an <code>int</code> return type. The algorithm of this function is <em>very similar</em> to the user input logic you have already used in EX02——note how we are condensing repetitive logic for inputting a row and column into one reusable function!</p>
 <p>Since the caller of this function can be expected to provide a correct argument for the <code>str</code> parameter, specifically one that is “row” or “column, we will”assert" this assumption in our code such that an error is raised if it is not found to be true. As the first line of code in your function’s body, add the following assert statement and fill in the blank (<code>_____</code>) with your second parameter’s name:</p>
 <p><code>assert ______ == "row" or ______ == "column"</code></p>
-<p>Once you have tried implementing the function, import it for use in the REPL to test it out. As featured in the example below, run the <code>python</code> command to start the REPL. Subsequently, the command <code>from exercises.ex03_functional_battleship import input_guess</code> will <code>import</code> your function definition <code>from</code> your <code>exercises.ex03_functional_battleship</code>. Type out the example <em>function calls</em> to check that your function returns the expected values.</p>
+<p>Once you have tried implementing the function, import it for use in the REPL to test it out. As featured in the example below, run the <code>python</code> command to start the REPL. Subsequently, the command <code>from ex03_functional_battleship import input_guess</code> will <code>import</code> your function definition <code>from</code> your <code>ex03_functional_battleship</code>. Type out the example <em>function calls</em> to check that your function returns the expected values.</p>
 <pre>
 <div class="terminal">
     $ python                         
     Python 3.10.2 (v3.10.2:a58ebcc701, Jan 13 2022, 14:50:16) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
 
-    >>> from exercises.ex03_functional_battleship import input_guess
+    >>> from ex03_functional_battleship import input_guess
     >>> input_guess(4, "row")
     Guess a row: 4
     4
@@ -226,7 +226,7 @@
     >>> input_guess(4, "rolumn")
     Traceback (most recent call last):
         File "<stdin>", line 1, in <module>
-        File "/workspace/exercises/ex03_functional_battleship.py", line 3, in input_guess
+        File "/workspace/ex03_functional_battleship.py", line 3, in input_guess
             assert type == "row" or type == "column"
     AssertionError
     >>>quit()
@@ -247,7 +247,7 @@
 $ python
 Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
->>> from exercises.ex03_functional_battleship import print_grid
+>>> from ex03_functional_battleship import print_grid
 >>> print_grid(4,3,2,True)
 🟦🟦🟦🟦
 🟦🟦🟦🟦
@@ -274,7 +274,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     $ python
     Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
-    >>> from exercises.ex03_functional_battleship import correct_guess
+    >>> from ex03_functional_battleship import correct_guess
     >>> correct_guess(4,4,3,1) 
     False
     >>> correct_guess(3,2,1,2)
@@ -311,7 +311,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     $ python
     Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
-    >>> from exercises.ex03_functional_battleship import main
+    >>> from ex03_functional_battleship import main
     >>> main(4, 2, 1)
     === Turn 1/5 ===
     Guess a row: 3
@@ -351,7 +351,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     $ python
     Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
-    >>> from exercises.ex03_functional_battleship import main
+    >>> from ex03_functional_battleship import main
     >>> main(4, 4, 4)
     === Turn 1/5 ===
     Guess a row: 1
@@ -381,11 +381,11 @@ Type "help", "copyright", "credits" or "license" for more information.
     === Turn 4/5 ===
     Guess a row: 2
     Guess a column: 3
-    Miss!
     🟦🟦🟦🟦
     🟦🟦⬜🟦
     🟦🟦🟦🟦
     🟦🟦🟦🟦
+    Miss!
     === Turn 5/5 ===
     Guess a row: 1
     Guess a column: 2
@@ -398,7 +398,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     >>> quit()
 </div>
 </pre>
-<p>Once you have your <code>main</code> function and game loop working, there’s only one bit of icing left to add to your delicious code cake. We will fully explain what is going on in the following code snippet soon, but for now note that this is an idiom common to Python programs like the one you have written. We will learn it does three things: 1. it makes it possible to run your Python program as a module (if you tried <code>python -m exercises.ex03_functional_battleship</code> right now you would see nothing happens), 2. you can actually play your game with a randomized grid size and secret boat locations unknown to you, and 3. it makes it possible for other modules to <em>import</em> your functions and reuse them. Add the following snippet of code as the last 2 lines of your program (notice, there are two underscores <em>on both sides</em> of the words <code>name</code> and <code>main</code>):</p>
+<p>Once you have your <code>main</code> function and game loop working, there’s only one bit of icing left to add to your delicious code cake. We will fully explain what is going on in the following code snippet soon, but for now note that this is an idiom common to Python programs like the one you have written. We will learn it does three things: 1. it makes it possible to run your Python program as a module (if you tried <code>python -m ex03_functional_battleship</code> right now you would see nothing happens), 2. you can actually play your game with a randomized grid size and secret boat locations unknown to you, and 3. it makes it possible for other modules to <em>import</em> your functions and reuse them. Add the following snippet of code as the last 2 lines of your program (notice, there are two underscores <em>on both sides</em> of the words <code>name</code> and <code>main</code>):</p>
 <pre>
 <div class="terminal">
     if __name__ == "__main__":
@@ -407,7 +407,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 </div>
 </pre>
 <p>NOTE: You will also need to add <code>import random</code> somewhere at the top of your program, preferably underneath your <strong>author</strong> variable.</p>
-<p>Now you can try running your game as a module and it should work: <code>python -m exercises.ex03_functional_battleship</code></p>
+<p>Now you can try running your game as a module and it should work: <code>python -m ex03_functional_battleship</code></p>
 <p>Congratulations on writing your first <em>functional</em> program in COMP110!</p>
 <h2 id="part-5.-style-and-documentation-requirements-20-points-manually-graded">Part 5. Style and Documentation Requirements – 20 Points (Manually Graded)</h2>
 <p>We will manually grade your code and are looking for good choices of meaningful variable names. Your variable names should be descriptive of their purposes. (Loop indexing variables can be short, such as <code>i</code>, or <code>idx</code>.) You should also use the Python <code>snake_case</code> convention where variable names are all lowercase and new words are separated by underscores.</p>
@@ -433,8 +433,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 <p>Login to Gradescope and select the assignment named “EX03 - Functional Battleship”. You’ll see an area to upload a zip file. To produce a zip file for autograding, return back to Visual Studio Code.</p>
 <p>If you <em>do not</em> see a Terminal at the bottom of your screen, open the Command Palette and search for “View: Toggle Integrated Terminal”.</p>
 <p>Type the following command (all on a single line):</p>
-<p><code>python -m tools.submission exercises/ex03_functional_battleship.py</code></p>
-<p>In the file explorer pane, look to find the zip file named “yy.mm.dd-hh.mm-exercises-ex01_chardle.py.zip”. The “yy”, “mm”, “dd”, and so on, are timestamps with the current year, month, day, hour, minute. If you right click on this file and select “Reveal in File Explorer” on Windows or “Reveal in Finder” on Mac, the zip file’s location on your computer will open. Upload this file to Gradescope to submit your work for this exercise.</p>
+<p><code>python -m tools.submission ex03_functional_battleship.py</code></p>
+<p>In the file explorer pane, look to find the zip file named “yy.mm.dd-hh.mm-ex03_functional_battleship.py.zip”. The “yy”, “mm”, “dd”, and so on, are timestamps with the current year, month, day, hour, minute. If you right click on this file and select “Reveal in File Explorer” on Windows or “Reveal in Finder” on Mac, the zip file’s location on your computer will open. Upload this file to Gradescope to submit your work for this exercise.</p>
 <p>Autograding will take a few moments to complete. For this exercise there will be 20 “human graded” points. Thus, you should expect a maximum autograding score of 80 possible points on this assignment. If there are issues reported, you are encouraged to try and resolve them and resubmit. If for any reason you aren’t receiving full credit and aren’t sure what to try next, come give us a visit in office hours!</p>
 </div>
 
@@ -443,7 +443,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     </div> 
 
     <div class="authors-box bg-dark mt-4 py-3 ps-4">
-      <span> Contributor(s):        Camilla Fratta,        Audrey Salmon, Vrinda Desai</span>
+      <span> Contributor(s):        Camilla Fratta,        Audrey Salmon,        Vrinda Desai,        Alyssa Lytle, Viktorya Hunanyan</span>
     </div>
   </div>
   <div class='link-page mt-3 container'>
