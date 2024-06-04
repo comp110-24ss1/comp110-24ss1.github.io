@@ -7,7 +7,7 @@
     <title> Team Lead Guide to Grading - COMP110 - 24S</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1717514939.4682343">
+    <link rel="stylesheet" href="/static/styles.css?v=1717516639.3667092">
 </head>
 
 <body id="body" class="absolute-page container">
@@ -69,6 +69,12 @@
                         <ul class="overview-item"><ul>
 <li><a href="#key-objectives">Key Objectives</a></li>
 <li><a href="#overview">Overview</a></li>
+<li><a href="#quiz-grading">Quiz Grading</a>
+<ul>
+<li><a href="#multiple-choice-tf-short-response-questions">Multiple Choice, T/F, Short Response Questions</a></li>
+<li><a href="#memory-diagrams-and-code-writing">Memory Diagrams and Code Writing</a></li>
+<li><a href="#regrade-requests">Regrade Requests</a></li>
+</ul></li>
 <li><a href="#generating-spreadsheets-for-project-grading">Generating Spreadsheets for Project Grading</a></li>
 <li><a href="#building-and-deploying-autograders-to-gradescope">Building and Deploying Autograders to Gradescope</a></li>
 </ul>
@@ -80,11 +86,32 @@
         <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h2 id="key-objectives">Key Objectives</h2>
 <ul>
 <li>Overview</li>
+<li>Quiz Grading</li>
 <li>Generating Spreadsheets for Project Grading</li>
 <li>Building and Deploying Autograders to Gradescope</li>
 </ul>
 <h2 id="overview">Overview</h2>
-<p>The grading team lead is mainly responsible for organizing weekly meetings for assignment/quiz grading, handling regrade requests, and allocating projects to TAs for them to grade. During quiz weeks, there may be a need to schedule multiple meetings in order to quickly grade and return quizzes back to students. It is important to check Gradescope often to keep up with regrade requests, especially in the weeks following the release of quiz or project grades as this is when the majority of regrades are requested. Occasionally, depending on the exercise/project, the grading team lead will also need to update the autograder.</p>
+<p>The grading team lead is mainly responsible for organizing weekly meetings for assignment/quiz grading, handling regrade requests, and allocating projects to TAs for them to grade. During quiz weeks, there may be a need to schedule multiple meetings in order to quickly grade and return quizzes back to students. It is important to check Gradescope often to keep up with regrade requests, especially in the weeks following the release of quiz or project grades as this is when the majority of regrades are requested. Occasionally, depending on the exercise/project, the grading team lead will also need to update the autograder - with the addition of the Curriculm Lead this is less likely, but still relevant.</p>
+<h2 id="quiz-grading">Quiz Grading</h2>
+<p>Gradescope has a lot of automation tools that make quiz grading much easier. There are grouping capabilities for multiple choice, text response, and math response. Instead of going through each question one at a time you are able to group them and then grade them all at once. The steps below describe how to group and grade questions that fall into those categories above. For diagraming question or code writing, grouping will not work and answers must be graded individually</p>
+<h3 id="multiple-choice-tf-short-response-questions">Multiple Choice, T/F, Short Response Questions</h3>
+<ol type="1">
+<li>Click the desired quiz to grade</li>
+<li>Select the number of the question to grade. It should have an underline appear when you hover over it. (If you click Submissions when it pops up it will take you to grade individually instead of grouping)</li>
+<li>It will ask you whether you want to grade individually or grade in groups. Based on the type of question - MCQ, math written, text written - you can select the most fitting grouping category.</li>
+<li>Gradescope will do a sizeable amount of the work sorting the responses but you need to scan over the sorted items to make sure they are correct. You will check each group one by one to make sure they’re right before moving on to group the unsorted answers. (A lot of the time gradescope will misread parenthesis and brackets so it will create multiple groups with correct answers because it cannot tell the difference. Those groups can be merged together to make grading easier because there are less groups.)</li>
+<li>Once the original groups have been checked and merged you can then select answers from whatever is left unsorted and place them in the correct group. You can also make new groups to put answers into - it is helpful here to look at the rubric to see if there are partial credit points and sort any answers into partial credit groups if they do not receive full credit, ex. using parenthesis instead of brackets for indexing may receive partial credit and sorting answers with parenthesis together may be easier to grade.</li>
+<li>After answers have been sorted then clicking the Grade button on the bottom right will take you to grade each group. It will have you grade one answer from each group and then will apply your selection from the rubric to all other items in that group.</li>
+</ol>
+<h3 id="memory-diagrams-and-code-writing">Memory Diagrams and Code Writing</h3>
+<p>These questions are written and are not ones that can be sorted by gradescope - sometimes the output can be graded individually with grouping but the actual diagrams and code writing must be done one-by-one. These questions and their rubrics vary throughout the semester as the content gets more complex as the semester goes on.</p>
+<p>In the past there have been grading teams formed of 5-ish TAs who would meet once the quizzes were scanned to start the grading and then most of the grading would be done by them and the Grading Lead. Recently TAs have been grading in All-Hands and individually and this has been successful where the Grading Lead helps answer questions about the rubric and make decisions for how to grade certain cases.</p>
+<p><strong>Gradescope Shortcuts</strong></p>
+<p>When grading these questions, it is easier to use the keyboard rather than the mouse. Each rubric item gets assigned to a number on the keyboard and any drop-down rubric items will have letters used to grade the individual rubric items in the drop-down.</p>
+<p>Z : takes you to the next ungraded submission -&gt; : takes you to the next submission in the sequence &lt;- : takes you back one submission in the sequence</p>
+<h3 id="regrade-requests">Regrade Requests</h3>
+<p>Regrade requests will technically be assigned to the person who graded the question. Typically regrade requests are questions that fall through the cracks with the grouping or memory diagrams questions. These should be done and responded to as soon as possible so students can know what their final grade is with the regrade.</p>
+<p>Sometimes regrade requests are written as trying to argue about receiving points back, generally it is clear whether the question was graded incorrectly and if the points should be returned back. If you have any concerns about a regrade request or do not know how to respond, ask for advice for how to handle it.</p>
 <h2 id="generating-spreadsheets-for-project-grading">Generating Spreadsheets for Project Grading</h2>
 <p>Once a project deadline has passed, the submissions must be divvied up among all the TAs for them to grade. Generate the spreadsheet using the following steps:</p>
 <ol type="1">
@@ -155,15 +182,15 @@
 
     <!-- Load our React components. -->
 
-    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1717514939.4682343"></script>
-    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1717514939.4682343"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1717514939.4682343"></script>
-        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1717514939.4682343"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1717514939.4682343"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1717514939.4682343"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1717514939.4682343"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1717514939.4682343"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1717514939.4682343"></script>
+    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1717516639.3667092"></script>
+    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1717516639.3667092"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1717516639.3667092"></script>
+        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1717516639.3667092"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1717516639.3667092"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1717516639.3667092"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1717516639.3667092"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1717516639.3667092"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1717516639.3667092"></script>
     <script src="/static/scripts/log-in-handler.js"></script>
 
     
