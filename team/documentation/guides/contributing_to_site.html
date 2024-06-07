@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Styling and Features Documentation - COMP110 - 24S</title>
+    <title> Contributing to the 110 Site - COMP110 - 24S</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1717768500.842281">
+    <link rel="stylesheet" href="/static/styles.css?v=1717768501.2869377">
 </head>
 
 <body id="body" class="absolute-page container">
@@ -55,7 +55,7 @@
     <div id="logistics-page" class="container">
         <div class="row pt-4">
             <div class="col-12">
-            <h2 >Styling and Features Documentation</h2>
+            <h2 >Contributing to the 110 Site</h2>
             <hr class="title"/>
         </div>
     <script src="/static/scripts/toggle-handler.js"></script>
@@ -67,36 +67,46 @@
                 <div id="overview-links">
                     <div id="TOC" role="doc-toc">
                         <ul class="overview-item"><ul>
-<li><a href="#page-layouts">Page Layouts</a></li>
-<li><a href="#page-specific-styling">Page Specific Styling</a></li>
+<li><a href="#making-contributions-to-the-110-site">Making Contributions to the 110 Site</a>
+<ul>
+<li><a href="#create-a-branch">Create a branch</a></li>
+<li><a href="#commit-push-changes-to-branch">Commit + Push Changes to Branch</a></li>
+<li><a href="#make-a-pull-request">Make a Pull Request</a></li>
+</ul></li>
 </ul>
 </</ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><blockquote>
-<p>Detailed below are some extra styling and layout features you can use, outside of what is possible with markdown.</p>
-</blockquote>
-<h1 id="page-layouts">Page Layouts</h1>
-<p>There are currently 3 different layouts you can use. To switch page layouts, change the <code>template</code> variable at the top of your md file.</p>
-<ul>
-<li>The most basic layout is called <code>generic</code> and will result in a full width page.</li>
-<li>The second layout is <code>overview</code> which will add an overview/ table of contents side bar to your page.</li>
-<li>The third is <code>columns</code>. To use the columns layout, in each place where you would like your markdown content to split into a new column add the text <code>//split//</code>. You can add many columns this way but it will start to look bad so make sure to view your page before commiting.</li>
-<li>The fourth is <code>rows</code>. To use the rows layout, in each place where you would like your markdown content to split into a new row add the text <code>//split//</code>. You can add as many rows as you like but make sure to view your page before commiting.</li>
-<li>The last is <code>grid</code>. To use the grid layout, in each place where you would like your markdown content to split into a new section add the text <code>//split//</code>. You can add as many sections as you like. You will also need to add a global variable called <code>row-length</code> and assign it an <code>int</code>. This will determine how many sections get put into each row of the grid. Make sure to view your page before commiting. (Check out <code>site/resources/team.md</code> for an example)</li>
-</ul>
-<blockquote>
-<p>Note: When using <code>//split//</code> make sure to have no space below it. Pandoc and jinja do not parse this well.</p>
-</blockquote>
-<h1 id="page-specific-styling">Page Specific Styling</h1>
-<p>There are some cases in which you may need to add css styling that only applies to your page. This is a feature that is not yet widely used but can come in handy!</p>
-<ul>
-<li>To use this feature, in the ‘global variables’ at the top of your md add a <code>page</code> variable and set it to a string value without spaces that describes your page. Keep in mind, you can reuse the same specific styles with the same name on other pages.</li>
-<li>This essentially wraps your content in an ID called <code>your-string-value-page</code>. (Note the <code>-page</code> gets added on by the parser.)</li>
-<li>Then in the css file (site/static/style.css), find the section labeled PAGE SPECIFIC STYLING and place your css rules here.</li>
-</ul>
+        <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h1 id="making-contributions-to-the-110-site">Making Contributions to the 110 Site</h1>
+<p>If you have already set up your <a href="/team/documentation/guides/ta_profile.html">TA profile</a>, you’ve already done all of these steps! This just generalizes the steps in case you are modifying anything else on the site!</p>
+<h2 id="create-a-branch">Create a branch</h2>
+<ol type="1">
+<li>Make sure you’re on the main branch (<code>git checkout main</code>) and run the command <code>git pull origin main</code> to get the latest updates.</li>
+<li>Checkout a new <code>git</code> branch. In your terminal run the following command, replacing <code>branch-name</code> with a descriptive name, not using any spaces (e.g. <code>git checkout -b qz01-review-edits</code>): <code>git checkout -b branch-name</code></li>
+<li>In the terminal type: <code>git branch</code> This will give you all the branches you have created. You should now see the new branch you have created.</li>
+</ol>
+<p>Now you can go ahead and make any edits you want!</p>
+<h2 id="commit-push-changes-to-branch">Commit + Push Changes to Branch</h2>
+<ol type="1">
+<li><p>Now you can add all your changes to stage them for committing! You can use <code>git add path/to/file</code> to add the file you modified.</p></li>
+<li><p>In the terminal type: <code>git status</code></p></li>
+</ol>
+<p>This will check the changes that we have made are ready to be committed.</p>
+<ol start="3" type="1">
+<li><p>Commit your changes! In the terminal type: <code>git commit -m "Message describing the changes we have made or add"</code></p></li>
+<li><p>In the terminal type: <code>git push origin branch-name</code></p></li>
+</ol>
+<h2 id="make-a-pull-request">Make a Pull Request</h2>
+<ol type="1">
+<li>Open GitHub Pull Requests on the <code>comp110</code> repo: https://github.com/comp110-lytle/comp110/pulls</li>
+<li>You might/should see a notification box: “Your recently pushed branches…”. If so select “Compare &amp; Pull Request”. If not, select “New Pull Request”, and in the Compare branch drop-down select your branch.</li>
+<li>Scroll through the differences and confirm your latest changes were successfully pushed. If you don’t see them, check that you committed everything you expected and pushed to your branch. Select “Create Pull Request”.</li>
+<li>In the description box, briefly describe your branch.</li>
+<li>On the right-hand sidebar, select your Web Lead as a reviewer.</li>
+<li>Create pull request!</li>
+</ol>
 </div>
 
        
@@ -110,7 +120,7 @@
 
 
     <div class="authors-box bg-dark mt-4 py-3 ps-4">
-      <span> Contributor(s): Ezri White</span>
+      <span> Contributor(s):              Alyssa Lytle, Viktorya Hunanyan</span>
     </div>       
   </div>
 
@@ -136,15 +146,15 @@
 
     <!-- Load our React components. -->
 
-    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1717768500.842281"></script>
-    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1717768500.842281"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1717768500.842281"></script>
-        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1717768500.842281"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1717768500.842281"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1717768500.842281"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1717768500.842281"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1717768500.842281"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1717768500.842281"></script>
+    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1717768501.2869377"></script>
+    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1717768501.2869377"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1717768501.2869377"></script>
+        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1717768501.2869377"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1717768501.2869377"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1717768501.2869377"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1717768501.2869377"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1717768501.2869377"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1717768501.2869377"></script>
     <script src="/static/scripts/log-in-handler.js"></script>
 
     
