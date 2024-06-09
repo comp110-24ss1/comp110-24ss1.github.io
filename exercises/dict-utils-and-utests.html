@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> EX05 - Dictionary Utils - COMP110 - 24S</title>
+  <title> EX05 - Dictionary Utils + Unit Tests - COMP110 - 24S</title>
   <link rel="icon" type="image/png" href="/static/tabbrand.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1717950237.9164522">
+  <link rel="stylesheet" href="/static/styles.css?v=1717950240.1657593">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
   <div id="exercises-page" class="container">
     <div class="row pt-4">
       <div class="col-12">
-        <h1>EX05 - Dictionary Utils</h1>
+        <h1>EX05 - Dictionary Utils + Unit Tests</h1>
         <hr class="title" />
       </div>
     </div>
@@ -64,13 +64,15 @@
 <li><a href="#ex05---dictionary-utility-functions">EX05 - Dictionary Utility Functions</a>
 <ul>
 <li><a href="#setup">0. Setup</a></li>
-<li><a href="#invert">1. <code>invert</code></a></li>
-<li><a href="#favorite-colors">2. <code>favorite colors</code></a></li>
-<li><a href="#count">3. <code>count</code></a></li>
-<li><a href="#alphabetizer">4. <code>alphabetizer</code></a></li>
+<li><a href="#count">1. <code>count</code></a></li>
+<li><a href="#alphabetizer">2. <code>alphabetizer</code></a></li>
+<li><a href="#invert">3. <code>invert</code></a></li>
+<li><a href="#favorite-colors">4. <code>favorite colors</code></a></li>
 <li><a href="#update_attendance">5. <code>update_attendance</code></a></li>
-<li><a href="#make-a-backup-checkpoint-commit">6. Make a Backup Checkpoint “Commit”</a></li>
-<li><a href="#submit-to-gradescope-for-grading">7. Submit to Gradescope for Grading</a></li>
+<li><a href="#writing-unit-tests">6. Writing Unit Tests</a></li>
+<li><a href="#make-a-backup-checkpoint-commit">7. Make a Backup Checkpoint “Commit”</a></li>
+<li><a href="#submit-to-gradescope-for-grading">8. Submit to Gradescope for Grading</a></li>
+<li><a href="#basic-debugging">Basic Debugging</a></li>
 </ul></li>
 </ul>
 </</ul>
@@ -79,20 +81,46 @@
             </div>
         </div>
         <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h1 id="ex05---dictionary-utility-functions">EX05 - Dictionary Utility Functions</h1>
-<p>In this exercise you will get some practice with dictionary functions!</p>
-<p>Assignment Outline</p>
-<ul>
-<li><code>invert</code> – 10 Points Autograded</li>
-<li><code>count</code> – 10 Points Autograded</li>
-<li><code>favorite_colors</code> – 20 Points Autograded</li>
-<li><code>alphabetizer</code>– 20 Points Autograded</li>
-<li><code>update_attendance</code> – 20 Points Autograded</li>
-<li>Style, Linting, Typing – 20 Points Autograded</li>
-</ul>
+<p>In this exercise you will get some practice with dictionary functions AND write some unit tests for them!</p>
 <h2 id="setup">0. Setup</h2>
 <p>Create a new <strong>directory</strong> in <code>exercises</code> named <code>ex05</code>.</p>
 <p>Inside the <code>exercises/ex05</code> directory, create a file named <code>dictionary.py</code>. Add a docstring and establish an <code>__author__</code> variable to be assigned a string with the digits of your PID. This is where you will implement your function skeletons and implementations below.</p>
-<h2 id="invert">1. <code>invert</code></h2>
+<p>Additionally, create a file named <code>dictionary_test.py</code>. Add a docstring and establish an <code>__author__</code> variable to be assigned a string with the digits of your PID. This is where you will write unit tests for the 5 functions you define in the <code>dictionary.py</code> file.</p>
+<h2 id="count">1. <code>count</code></h2>
+<p>Given a <code>list[str]</code>, this function will produce a <code>dict[str, int]</code> where each key is a unique value in the given list and each value associated is the <em>count</em> of the number of times that value appeared in the input list.</p>
+<ul>
+<li>Function name: <code>count</code></li>
+<li>Parameter: <code>list[str]</code> - list of values to count the frequencies of</li>
+<li>Return Type: <code>dict[str, int]</code> - a dictionary of the counts of each of the items in the input list</li>
+</ul>
+<p>Implementation strategy:</p>
+<ol type="1">
+<li>Establish an empty dictionary to store your built-up result in</li>
+<li>Loop through each item in the input list
+<ol type="1">
+<li>Check to see if that item has already been established as a key in your dictionary. Try the following boolean conditional: <code>if &lt;item&gt; in &lt;dict&gt;:</code> – replacing <code>&lt;item&gt;</code> with the variable name of the current value and <code>&lt;dict&gt;</code> with the name of your result dictionary.</li>
+<li>If the item is found in the dict, that means there is already a key/value pair where the item is a key. Increase the value associated with that key by 1 (counting it!)</li>
+<li>If the item is not found in the dict, that means this is the first time you are encountering the value and should assign an initial count of <code>1</code> to that key in the result dictionary.</li>
+</ol></li>
+<li>Return the resulting dictionary.</li>
+</ol>
+<h2 id="alphabetizer">2. <code>alphabetizer</code></h2>
+<p>Given a <code>list[str]</code>, this function will produce a <code>dict[str, list[str]]</code> where each key is a unique letter in the alphabet and each value is a list of the words that begin with that letter.</p>
+<ul>
+<li>Function name: <code>alphabetizer</code></li>
+<li>Parameter: <code>list[str]</code> - list of words to categorize into different lists</li>
+<li>Return Type: <code>dict[str, list[str]]</code> - a dictionary of the letters and the lists of words that belong to that letter</li>
+</ul>
+<p>Example usage:</p>
+<pre>
+<div class="terminal">>>> alphabetizer(["cat", "apple", "boy", "angry", "bad", "car"])
+{'c': ['cat', 'car'], 'a': ['apple', 'angry'], 'b': ['boy', 'bad']}
+>>> alphabetizer(["Python", "sugar", "Turtle", "party", "table"])
+{'p': ['Python', 'party'], 's': ['sugar'], 't': ['Turtle', 'table']}
+</div>
+</pre>
+<p>Hint: The built-in Python method <code>.lower()</code> takes in no arguments and returns the lower cased string of a given string.</p>
+<h2 id="invert">3. <code>invert</code></h2>
 <p>This is the first function you will write in <code>dictionary.py</code>. The other two functions will also be defined in this file.</p>
 <p>Given a <code>dictionary</code> of <code>[str, str]</code>, <code>invert</code> should return a <code>dict[str, str]</code> that inverts the keys and the values. The keys of the input list becomes the values of the output list and vice versa.</p>
 <ul>
@@ -110,7 +138,7 @@ KeyError
 </div>
 </pre>
 <p>Similar to how you raised a <code>ValueError</code> in the <code>max</code> function for <code>list</code> utils, the syntax for raising a <code>KeyError</code> is: <code>raise KeyError("error message of your choice here!")</code></p>
-<h2 id="favorite-colors">2. <code>favorite colors</code></h2>
+<h2 id="favorite-colors">4. <code>favorite colors</code></h2>
 <p>Create a function in your <code>dictionary.py</code> file called <code>favorite_color</code>. It has the following specifications:</p>
 <ol type="1">
 <li>It takes as input a <code>dict[str, str]</code> of names and favorite colors.</li>
@@ -131,40 +159,6 @@ KeyError
 <div class="terminal">$ python -m exercises.ex05.favorite_color
 blue
 </div></pre>
-<h2 id="count">3. <code>count</code></h2>
-<p>Given a <code>list[str]</code>, this function will produce a <code>dict[str, int]</code> where each key is a unique value in the given list and each value associated is the <em>count</em> of the number of times that value appeared in the input list.</p>
-<ul>
-<li>Function name: <code>count</code></li>
-<li>Parameter: <code>list[str]</code> - list of values to count the frequencies of</li>
-<li>Return Type: <code>dict[str, int]</code> - a dictionary of the counts of each of the items in the input list</li>
-</ul>
-<p>Implementation strategy:</p>
-<ol type="1">
-<li>Establish an empty dictionary to store your built-up result in</li>
-<li>Loop through each item in the input list
-<ol type="1">
-<li>Check to see if that item has already been established as a key in your dictionary. Try the following boolean conditional: <code>if &lt;item&gt; in &lt;dict&gt;:</code> – replacing <code>&lt;item&gt;</code> with the variable name of the current value and <code>&lt;dict&gt;</code> with the name of your result dictionary.</li>
-<li>If the item is found in the dict, that means there is already a key/value pair where the item is a key. Increase the value associated with that key by 1 (counting it!)</li>
-<li>If the item is not found in the dict, that means this is the first time you are encountering the value and should assign an initial count of <code>1</code> to that key in the result dictionary.</li>
-</ol></li>
-<li>Return the resulting dictionary.</li>
-</ol>
-<h2 id="alphabetizer">4. <code>alphabetizer</code></h2>
-<p>Given a <code>list[str]</code>, this function will produce a <code>dict[str, list[str]]</code> where each key is a unique letter in the alphabet and each value is a list of the words that begin with that letter.</p>
-<ul>
-<li>Function name: <code>alphabetizer</code></li>
-<li>Parameter: <code>list[str]</code> - list of words to categorize into different lists</li>
-<li>Return Type: <code>dict[str, list[str]]</code> - a dictionary of the letters and the lists of words that belong to that letter</li>
-</ul>
-<p>Example usage:</p>
-<pre>
-<div class="terminal">>>> alphabetizer(["cat", "apple", "boy", "angry", "bad", "car"])
-{'c': ['cat', 'car'], 'a': ['apple', 'angry'], 'b': ['boy', 'bad']}
->>> alphabetizer(["Python", "sugar", "Turtle", "party", "table"])
-{'p': ['Python', 'party'], 's': ['sugar'], 't': ['Turtle', 'table']}
-</div>
-</pre>
-<p>Hint: The built-in Python method <code>.lower()</code> takes in no arguments and returns the lower cased string of a given string.</p>
 <h2 id="update_attendance">5. <code>update_attendance</code></h2>
 <p>Given a <code>dict[str, list[str]]</code>, this function will <em>mutate</em> and return that dictionary. It should meet the following specifications:</p>
 <ol type="1">
@@ -187,7 +181,26 @@ blue
 {'Monday': ['Vrinda', 'Kaleb'], 'Tuesday': ['Alyssa', 'Vrinda'], 'Wednesday': ['Kaleb']}
 </div>
 </pre>
-<h2 id="make-a-backup-checkpoint-commit">6. Make a Backup Checkpoint “Commit”</h2>
+<h2 id="writing-unit-tests">6. Writing Unit Tests</h2>
+<p>For each function (<code>invert</code>, <code>favorite_color</code>, <code>count</code>, <code>alphabetize</code>, <code>update_attendance</code>), you are to define at least <strong>3x unit test</strong> functions. Remember that a unit test function starts with <code>test_</code>.</p>
+<p>The 3 unit tests should consist of:</p>
+<ul>
+<li>Two use cases: expected use cases of a function</li>
+<li>One edge case: unexpected use cases of a function</li>
+</ul>
+<p>Include descriptive function names and docstrings, so that it captures what is being tested.</p>
+<p>The command to run your tests is <code>python -m pytest exercises/ex05/dictionary_test.py</code> or you can run them using the beaker tab in VSCode if it is working (do note the VSCode testing feature tends to be a bit flaky).</p>
+<p>If your screen is large enough, you are encouraged to open these files side-by-side in VSCode by dragging the tab of one to the right side of VSCode so that it changes to a split pane view. Closing your file explorer can help give you additional horizontal space.</p>
+<h4 id="testing-for-keyerror"><em>Testing for KeyError:</em></h4>
+<p>You may optionally add a test for the invert function to check if the KeyError is being raised. Testing errors requires different syntax than testing normal outputs. If an error is raised then the function never actually returned anything, so we are unable to <code>assert</code> a return value. Instead try the following:</p>
+<ol type="1">
+<li>Make sure to <code>import pytest</code></li>
+<li>Use the following code as an example:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">KeyError</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>        my_dictionary <span class="op">=</span> {<span class="st">&#39;alyssa&#39;</span>: <span class="st">&#39;byrnes&#39;</span>, <span class="st">&#39;adam&#39;</span>: <span class="st">&#39;byrnes&#39;</span>}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>        invert(my_dictionary)</span></code></pre></div>
+<h2 id="make-a-backup-checkpoint-commit">7. Make a Backup Checkpoint “Commit”</h2>
 <p>As you make progress on this exercise, making backups is encouraged.</p>
 <ol type="1">
 <li>Open the Source Control panel (Command Palette: “Show SCM” or click the icon with three circles and lines on the activity panel).</li>
@@ -196,18 +209,20 @@ blue
 <ul>
 <li>If you do not want to backup <em>all</em> changed files, you can select them individually. For this course you’re encouraged to back everything up.</li>
 </ul></li>
-<li>In the Message box, give a brief description of what you’ve changed and are backing up. This will help you find a specific backup (called a “commit”) if needed. In this case a message such as, “Progress on Exercise 3” will suffice.</li>
+<li>In the Message box, give a brief description of what you’ve changed and are backing up. This will help you find a specific backup (called a “commit”) if needed. In this case a message such as, “Progress on Exercise” will suffice.</li>
 <li>Press the Check icon to make a <em>Commit</em> (a version) of your work.</li>
 <li>Finally, press the Ellipses icon (…), look for “Pull/Push” submenu, and select “Push to…”, and in the dropdown select your backup repository.</li>
 </ol>
-<h2 id="submit-to-gradescope-for-grading">7. Submit to Gradescope for Grading</h2>
-<p>Login to Gradescope and select the assignment named “EX05 - Dictionaries.”. You’ll see an area to upload a zip file. To produce a zip file for autograding, return back to Visual Studio Code.</p>
+<h2 id="submit-to-gradescope-for-grading">8. Submit to Gradescope for Grading</h2>
+<p>Login to Gradescope and select the assignment named “EX05 - Dictionary Utils + Unit Tests”. You’ll see an area to upload a zip file. To produce a zip file for autograding, return back to Visual Studio Code.</p>
 <p>If you <em>do not</em> see a Terminal at the bottom of your screen, open the Command Palette and search for “View: Toggle Integrated Terminal”.</p>
 <p>Type the following command (all on a single line):</p>
-<pre><code>python -m tools.submission exercises/ex05</code></pre>
-<p>In the file explorer pane, look to find the zip file named “yy.mm.dd-hh.mm-exercises-ex05.zip”. The “yy”, “mm”, “dd”, and so on, are timestamps with the current month, day, hour, minute. If you right click on this file and select “Reveal in File Explorer” on Windows or “Reveal in Finder” on Mac, the zip file’s location on your computer will open. Upload this file to Gradescope to submit your work for this exercise.</p>
+<p><code>python -m tools.submission exercises/ex05</code></p>
+<p>In the file explorer pane, look to find the zip file named “yy.mm.dd-hh.mm-exercises-ex05.zip”. The “yy”, “mm”, “dd”, and so on, are timestamps with the current year, month, day, hour, minute. If you right click on this file and select “Reveal in File Explorer” on Windows or “Reveal in Finder” on Mac, the zip file’s location on your computer will open. Upload this file to Gradescope to submit your work for this exercise.</p>
 <p>Autograding will take a few moments to complete. If there are issues reported, you are encouraged to try and resolve them and resubmit. If for any reason you aren’t receiving full credit and aren’t sure what to try next, come give us a visit in office hours!</p>
-<p>NOTE: The autograder for this assignment will only test for correct function signatures and basic functionality. You are encouraged to think about edge cases and the robustness of your code on your own. In the next part of this assignment, you will write your own unit tests to ensure that your functions work under a variety of circumstances.</p>
+<h2 id="basic-debugging">Basic Debugging</h2>
+<p>If you’re not passing autograder tests and don’t know why, try locally running your pytests to see if that gives you more insight! You can do that with the following command in your terminal:</p>
+<p><code>python -m pytest exercises/ex05/dictionary_test.py</code></p>
 </div>
 
        
