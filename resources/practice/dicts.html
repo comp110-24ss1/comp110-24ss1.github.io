@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Virtual Lesson 09 - COMP110 - 24S</title>
+  <title> Dictionary Conceptual Questions - COMP110 - 24S</title>
   <link rel="icon" type="image/png" href="/static/tabbrand.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1718293802.1244128">
+  <link rel="stylesheet" href="/static/styles.css?v=1718293806.5532572">
 </head>
 
 <body>
@@ -47,23 +47,76 @@
   <div id="lessons-page" class="container">
     <div class="row pt-4">
       <div class="col-12">
-        <h1>Virtual Lesson 09</h1>
+        <h1>Dictionary Conceptual Questions</h1>
         <hr class="title" />
       </div>
     </div>
 
-    <div class="container">
-                <div class="content"><h1 id="lessons">Lessons</h1>
-<div class="box link-page m-2 p-4">
-<div class="plan Class">
-<p><span class="kind">LS25 </span> <span class="title">Introduction to Object Oriented Programming:</span> <a href="https://www.youtube.com/watch?v=DmYPEH8qkRI">Video</a> | <a href="/static/slides/OOP.pdf">Slides</a> | <a href="https://www.gradescope.com/">Assignment</a></p>
-</div>
-</div>
-</div>
+    <script src="/static/scripts/toggle-handler.js"></script>
+    
+    <div class="row px-4">
+        <div id="box" class="toc col-xl-3 col-lg-3 order-1 order-lg-2" role="doc-toc">
+            <div id="menu-overview" class="link-page horizon-box">
+                <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview  <img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-up.svg" style="height:15px; padding-left: 4px;"></button>
+                <div id="overview-links">
+                    <div id="TOC" role="doc-toc">
+                        <ul class="overview-item"><ul>
+<li><a href="#questions">Questions</a>
+<ul>
+<li><a href="#conceptual">Conceptual</a></li>
+<li><a href="#basic-syntax">Basic Syntax</a></li>
+</ul></li>
+<li><a href="#answers">Answers</a>
+<ul>
+<li><a href="#conceptul-questions">Conceptul Questions</a></li>
+</ul></li>
+<li><a href="#syntax-solutions">Syntax Solutions</a></li>
+</ul>
+</</ul>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div id="content" class="content box col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h1 id="questions">Questions</h1>
+<h2 id="conceptual">Conceptual</h2>
+<ol type="1">
+<li>Dictionaries in Python can have duplicate keys. (T/F)</li>
+<li>Dictionaries in Python can be nested, meaning a dictionary can contain another dictionary as a value. (T/F)</li>
+<li><code>[]</code> is to <code>list</code>s as ___ is to <code>dict</code>s.</li>
+</ol>
+<h2 id="basic-syntax">Basic Syntax</h2>
+<ol type="1">
+<li><p>Create a new dictionary called <code>my_dictionary</code> with <code>str</code> keys and <code>float</code> values and initialize it as an empty dictionary.</p></li>
+<li><p>Using the following dictionary, <code>msg: dict[str, int] = {"Hello": 1, "Yall": 2}</code>, access the <em>value</em> stored under key “Yall”.</p></li>
+<li><p>Using the following dictionary, <code>msg: dict[str, int] = {"Hello": 1, "Yall": 2}</code>, increase the <em>value</em> stored under key “Yall” by 3.</p></li>
+<li><p>Using the following dictionary, <code>ids: dict[int, str] = {100: "Alyssa", 200: "Carmine"}</code>, remove the value “Alyssa”, stored at key 100.</p></li>
+<li><p>Using the following dictionary, <code>ids: dict[int, str] = {100: "Alyssa", 200: "Carmine"}</code>, write a line of code to get the number of key/value pairs in the dictionary.</p></li>
+<li><p>Using the following dictionary, <code>stock: dict[str, int] = {"carrots": 50, "beets": 20, "apples": 10}</code>, write a line of code to check if key “carrots” is in the dictionary.</p></li>
+</ol>
+<h1 id="answers">Answers</h1>
+<h2 id="conceptul-questions">Conceptul Questions</h2>
+<ol type="1">
+<li>False</li>
+<li>True</li>
+<li><code>{}</code></li>
+</ol>
+<h1 id="syntax-solutions">Syntax Solutions</h1>
+<ol type="1">
+<li><p><code>my_dictionary: dict[str, float] = {}</code> or <code>my_dictionary: dict[str, float] = dict()</code></p></li>
+<li><p><code>msg["Yall"]</code></p></li>
+<li><p><code>msg["Yall"] += 3</code> or <code>msg["Yall"] = 5</code></p></li>
+<li><p><code>ids.pop(100)</code></p></li>
+<li><p><code>len(ids)</code></p></li>
+<li><p><code>carrots in stock</code></p></li>
+</ol>
+</div>
+
+       
+
+    </div> 
 
     <div class="authors-box bg-dark mt-4 py-3 ps-4">
-      <span> Contributor(s): Alyssa Byrnes</span>
+      <span> Contributor(s):        Alyssa Lytle, Carmine Anderson-Falconi</span>
     </div>
   </div>
   <div class='link-page mt-3 container'>
