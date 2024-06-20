@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1718922590.1669888">
+  <link rel="stylesheet" href="/static/styles.css?v=1718923109.9115503">
 </head>
 
 <body>
@@ -309,6 +309,23 @@
             else:
                 cost += 2.00
         return cost</code></pre>
+<h4 id="instantiation">Instantiation</h4>
+<pre><code>    my_order: HotCocoa = HotCocoa(False, &quot;vanilla&quot;, 5, 2)
+
+    # Add whipped cream. (Change has_whip to True.)
+    my_order.has_whip = True
+
+    # Add 2 marshmallows using mallow_adder.
+    my_order.mallow_adder(2)
+
+    # Create viktoryas_order with whip, &quot;peppermint&quot; flavor, 10 marshmallows, and sweetness level 2.
+    viktoryas_order: HotCocoa = HotCocoa(True, &quot;peppermint&quot;, 10, 2)
+
+    # Calculate the cost of [my_order, viktoryas_order] by calling order_cost.
+    order_cost([my_order, viktoryas_order])
+
+    # Print out the details of my_order.
+    print(my_order) # or print(str(my_order))</code></pre>
 <h3 id="timespent-solution"><code>TimeSpent</code> solution</h3>
 <pre><code>    class TimeSpent:
         
