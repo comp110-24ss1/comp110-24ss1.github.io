@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1718916504.688534">
+  <link rel="stylesheet" href="/static/styles.css?v=1718922053.7633374">
 </head>
 
 <body>
@@ -127,18 +127,46 @@
 </ul>
 <p>Practice calling these methods by instantiating a new car object and calling them!</p>
 <h3 id="hotcocoa"><code>HotCocoa</code></h3>
-<p>Create a class called <code>HotCocoa</code> with the following specifications: a. Each <code>HotCocoa</code> object has a <code>bool</code> attribute called <code>has_whip</code>, a <code>str</code> attribute called <code>flavor</code>, and two <code>int</code> attributes called <code>marshmallow_count</code> and <code>sweetness</code>. b. The class should have a constructor that takes in and sets up each of its attribute’s values. c. Write a method called <code>mallow_adder</code> that takes in an <code>int</code> called <code>mallows</code>, increases the <code>marshmallow_count</code> by that amount, and increases the <code>sweetness</code> by that amount times 2. d. Write a <code>__str__</code> magic method that displays the details of the hot cocoa order mimicing the following: - If it has whipped cream: <code>"A &lt;flavor&gt; cocoa with whip, &lt;marshmallow_count&gt; marshmallows, and level &lt;sweetness&gt; sweetness.</code> - If it doesn’t have whipped cream: <code>"A &lt;flavor&gt; cocoa without whip, &lt;marshmallow_count&gt; marshmallows, and level &lt;sweetness&gt; sweetness.</code> e. Write an <code>order_cost</code> <em>function</em> that takes as input a <code>list</code> of <code>HotCocoa</code> objects to represent an order and returns the total cost of the order. A <code>HotCocoa</code> with whip is $2.50 and without whip is $2.00.</p>
+<p>Create a class called <code>HotCocoa</code> with the following specifications:</p>
+<pre><code>a. Each `HotCocoa` object has a `bool` attribute called `has_whip`, a `str` attribute called `flavor`, and two `int` attributes called `marshmallow_count` and `sweetness`.
+
+b. The class should have a constructor that takes in and sets up each of its attribute’s values.
+
+c. Write a method called `mallow_adder` that takes in an `int` called `mallows`, increases the `marshmallow_count` by that amount, and increases the `sweetness` by that amount times 2.
+
+d. Write a `__str__` magic method that displays (aka returns a string with) the details of the hot cocoa order mimicing the following:
+
+    - If it has whipped cream:
+        `&quot;A &lt;flavor&gt; cocoa with whip, &lt;marshmallow_count&gt; marshmallows, and level &lt;sweetness&gt; sweetness.`
+    - If it doesn&#39;t have whipped cream:
+        `&quot;A &lt;flavor&gt; cocoa without whip, &lt;marshmallow_count&gt; marshmallows, and level &lt;sweetness&gt; sweetness.`
+
+e. Write an `order_cost` *function* that takes as input a `list` of `HotCocoa` objects to represent an order and returns the total cost of the order. A `HotCocoa` with whip is $2.50 and without whip is $2.00.</code></pre>
 <h3 id="timespent"><code>TimeSpent</code></h3>
-Create a class called <code>TimeSpent</code> with the following specifications: a. Each <code>TimeSpent</code> object has a <code>str</code> attribute called <code>name</code>, a <code>str</code> attribute called <code>purpose</code>, and an <code>int</code> attribute called <code>minutes</code>. b. The class should have a constructor that takes in and sets up each of its attribute’s values. c. Write a method called <code>add_time</code> that takes in an <code>int</code> and increases the <code>minutes</code> attribute by this amount. The method should return <code>None</code>. d. Write an <code>__add__</code> magic method that takes in an <code>int</code> called <code>added_minutes</code> and returns a new <code>TimeSpent</code> object with the same attribute values except that <code>minutes</code> is increased by <code>added_minutes</code>. e. Write a method called <code>reset</code> that resets the amount of time that is stored in the <code>minutes</code> attribute. The method should also return the amount that was stored in <code>minutes</code>. f. Write a <code>__str__</code> magic method returns a line reporting information about the current <code>TimeSpent</code> object. Suppose a <code>TimeSpent</code> object has <code>name</code> = <code>“Ariana”</code>, <code>purpose</code> = <code>“screen time”</code>, and <code>minutes</code> = <code>130</code>. The method should return: <code>“Ariana has spent 2 hours and 10 minutes on screen time.”</code> g. Write a <em>function</em> called <code>most_by_purpose</code> that takes as input a <code>list</code> of <code>TimeSpent</code> objects and a <code>str</code> to represent a purpose, and returns the name of the person who spent the most time doing that specific activity. - Example usage:
-<pre>
-    <div class="terminal">
-    >>> a: TimeSpent = TimeSpent("Alyssa", "studying", 5)
-    >>> b: TimeSpent = TimeSpent("Alyssa", "doom scrolling", 100)
-    >>> c: TimeSpent = TimeSpent("Vrinda", "studying", 200)
-    >>> most_by_purpose([a, b, c], "studying")
-    'Vrinda'
-    </div>
-    </pre>
+<p>Create a class called <code>TimeSpent</code> with the following specifications:</p>
+<pre><code>a. Each `TimeSpent` object has a `str` attribute called `name`, a `str` attribute called `purpose`, and an `int` attribute called `minutes`.
+
+b. The class should have a constructor that takes in and sets up each of its attribute’s values.
+
+c. Write a method called `add_time` that takes in an `int` and increases the `minutes` attribute by this amount. The method should return `None`.
+
+d. Write an `__add__` magic method that takes in an `int` called `added_minutes` and returns a new `TimeSpent` object with the same attribute values except that `minutes` is increased by `added_minutes`.
+
+e. Write a method called `reset` that resets the amount of time that is stored in the `minutes` attribute.  The method should also return the amount that was stored in `minutes`. 
+
+f. Write a `__str__` magic method returns a line reporting information about the current `TimeSpent` object.  Suppose a `TimeSpent` object has `name` = `“Ariana”`, `purpose` = `“screen time”`, and `minutes` = `130`.  The method should return: `“Ariana has spent 2 hours and 10 minutes on screen time.”`
+
+g. Write a *function* called `most_by_purpose` that takes as input a `list` of `TimeSpent` objects and a `str` to represent a purpose, and returns the name of the person who spent the most time doing that specific activity. 
+- Example usage: 
+&lt;pre&gt;
+&lt;div class=&quot;terminal&quot;&gt;
+&gt;&gt;&gt; a: TimeSpent = TimeSpent(&quot;Alyssa&quot;, &quot;studying&quot;, 5)
+&gt;&gt;&gt; b: TimeSpent = TimeSpent(&quot;Alyssa&quot;, &quot;doom scrolling&quot;, 100)
+&gt;&gt;&gt; c: TimeSpent = TimeSpent(&quot;Vrinda&quot;, &quot;studying&quot;, 200)
+&gt;&gt;&gt; most_by_purpose([a, b, c], &quot;studying&quot;)
+&#39;Vrinda&#39;
+&lt;/div&gt;
+&lt;/pre&gt;</code></pre>
 <h1 id="solutions">Solutions</h1>
 <h2 id="function-method-writing-with-class-objects-1">Function + Method Writing With Class Objects</h2>
 <h3 id="course-solution"><code>Course</code> Solution</h3>
